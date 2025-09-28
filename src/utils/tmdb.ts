@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = process.env.NEXT_PUBLIC_TMDB_BASE_URL || 'https://api.themoviedb.org/3';
+const BASE = process.env.NEXT_PUBLIC_TMDB_BASE_URL || 'developer.themoviedb.org/3';
 const KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY || '59bfe33b0e54ec72d7fd253b58ed259b';
 
 export async function searchMovies(query: string) {
