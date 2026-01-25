@@ -1,86 +1,118 @@
-# 🎬 Movie Recommendation App
+# ALX Project Nexus – ProDev Backend Engineering
 
 ## Overview
-The **Movie Recommendation App** is a responsive web application that helps users discover movies based on genres, popularity, and search queries. By integrating with a public movie API, the app provides dynamic movie data, recommendations, and personalized features such as saving favorites.  
 
-This project demonstrates skills in API integration, dynamic UI rendering, responsive design, and modern frontend development practices.
+This repository documents my key learnings from the ProDev Backend Engineering program.  
+It serves as a knowledge hub covering backend technologies, concepts, challenges, and best practices gained throughout the journey.
 
----
-
-## Project Goals
-1. **Dynamic Data Loading**  
-   Fetch and display movie data from TMDb (The Movie Database) API or another reliable movie API.
-   
-2. **User Engagement**  
-   - Search movies by title or filter by genre.  
-   - View trending/popular movies.  
-   - Add/remove favorites from a personalized list.  
-
-3. **Enhanced Experience**  
-   - Responsive, Netflix-style layout.  
-   - Smooth transitions and animations for a modern user experience.  
-   - Support for infinite scroll or pagination.  
+The goal of this project is to consolidate my backend experience and provide a reference guide for future learners while encouraging collaboration between frontend and backend developers.
 
 ---
 
-## Technologies Used
-- **React / Next.js** – Component-based UI development  
-- **TypeScript** – Type safety and maintainability  
-- **GraphQL / REST** – API integration for fetching movie data  
-- **TailwindCSS / Styled Components** – Modern styling and responsive design  
-- **LocalStorage / IndexedDB** – Save user favorites locally  
-- **(Optional: Firebase)** – User authentication and cloud storage  
+## Key Technologies Covered
+
+- Python
+- Django
+- RESTful APIs
+- GraphQL
+- Docker
+- CI/CD Pipelines
+- Celery & RabbitMQ
+- Redis Caching
+- PostgreSQL
+- Swagger API Documentation
 
 ---
 
-## Key Features
-- 🔍 **Search & Filter**: Find movies by title or genre  
-- ⭐ **Trending Section**: Browse trending and popular movies  
-- ❤️ **Favorites**: Save and manage a personal list of favorite movies  
-- 🎨 **Responsive UI**: Works seamlessly across mobile, tablet, and desktop  
-- ♾ **Infinite Scroll or Pagination**: Load more movies dynamically as the user scrolls  
+## Core Backend Concepts
+
+- Database Design & ORM
+- Authentication & Authorization
+- Asynchronous Programming
+- Background Tasks with Celery
+- Payment Gateway Integration (Chapa)
+- Caching Strategies
+- API Development (REST & GraphQL)
+- Deployment to Production
+- Environment Variable Management
+- System Design Principles
 
 ---
 
-## Implementation Process
-### Git Commit Workflow
-- **Initial Setup**  
-  `feat: initialize React project with API integration setup`  
+## Challenges Faced & Solutions
 
-- **Feature Development**  
-  `feat: implement movie search and genre filter`  
-  `feat: create favorites list functionality`  
+### 1. API Integration
+**Challenge:** Integrating third-party APIs like Chapa securely.
 
-- **UI Enhancements**  
-  `style: improve movie grid layout and add animations`  
-
-- **Bug Fixes**  
-  `fix: resolve API fetch errors and infinite scroll issues`  
-
-- **Documentation**  
-  `docs: update README with project setup and usage guide`  
+**Solution:**  
+Used environment variables for credentials and implemented verification endpoints with proper error handling.
 
 ---
 
-## Evaluation Criteria
-- **Functionality**: Dynamic movie fetching, search, filters, favorites  
-- **Code Quality**: Clean, modular, TypeScript-driven code  
-- **User Experience**: Responsive design, smooth interactions, accessibility  
-- **Version Control**: Meaningful commits, branching, PR workflow  
-- **Best Practices**: Industry-standard tools, patterns, and security  
-- **Deployment**: Hosted live app accessible online  
+### 2. Performance Optimization
+**Challenge:** Slow database queries on property listings.
+
+**Solution:**  
+Implemented Redis caching at view and queryset levels with cache invalidation using Django signals.
 
 ---
 
-## Future Enhancements
-- User login & profiles with Firebase or Auth0  
-- Movie details page with trailers and ratings  
-- Recommendations based on user favorites  
-- Dark mode toggle  
+### 3. Background Processing
+**Challenge:** Sending emails synchronously caused delays.
+
+**Solution:**  
+Used Celery with RabbitMQ to handle email notifications asynchronously.
+
+---
+
+### 4. Deployment Issues
+**Challenge:** Running Django with Celery in production.
+
+**Solution:**  
+Configured Gunicorn, environment variables, Swagger docs, and Celery workers on cloud hosting platforms.
+
+---
+
+## Best Practices & Takeaways
+
+- Always secure secrets using environment variables
+- Write modular and reusable code
+- Use background tasks for heavy operations
+- Cache expensive queries
+- Validate inputs thoroughly
+- Document APIs clearly
+- Test everything before deployment
+- Keep learning and collaborating
+
+---
+
+## Collaboration
+
+Collaboration played a key role in my learning journey.
+
+### Worked With:
+- Fellow ProDev Backend Learners  
+- ProDev Frontend Learners (to integrate APIs)
+
+### Platforms:
+- Discord (#ProDevProjectNexus)
+- GitHub
+
+---
+
+## Personal Growth
+
+Through this program, I strengthened my backend engineering skills, learned how production systems work, and gained real-world experience in building scalable APIs.
+
+This repository represents my growth from learning fundamentals to deploying full backend systems.
 
 ---
 
 ## Author
-Developed by **Lesego** 🚀 as part of **Project Nexus**.  
 
+Grace – ProDev Backend Engineering Learner  
+ALX Africa
 
+---
+
+#ALX_SE #ALX_BE #ProDevBackend
